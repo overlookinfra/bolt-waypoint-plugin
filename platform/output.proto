@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package platform;
+
+option go_package = "github.com/puppetlabs/bolt-waypoint-plugin/platform";
+
+message ResultSet {
+  repeated Result results = 1;
+  int32 Target_count = 2;
+  int32 Elapsed_time = 3;
+}
+
+message Result {
+    string Target = 1;
+    string Status = 2;
+    map<string, string> Result = 3;
+}
